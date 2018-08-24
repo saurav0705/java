@@ -5,29 +5,29 @@ class fibbo
     public static int  fibbonaci(int n)
     {
         if(n>1)
-        {
-        if(array[n-1]!=0 || array[n-2]!=0)
             {
-                if(array[n-1]!=0)
+                if(array[n-1]!=0 || array[n-2]!=0)
                     {
-                        array[n-2]=fibbonaci(n-2);
-                        return array[n-1]+array[n-2];
+                        if(array[n-1]==0)
+                            {
+                                array[n-1]=fibbonaci(n-1);
+
+                            }
+                            else
+                                {
+
+                                }
                     }
-                else if(array[n-2]!=0)
-                    {
-                        return array[n-1]+array[n-2];
-                    }
-            }  
-        else{
-            array[n-1]=fibbonaci(n-1);
-            array[n-2]=fibbonaci(n-2);
-            return array[n-1]+array[n-2];
+                    else
+                        {
+                            array[n-1]=fibbonaci(n-1);
+                            array[n-2]=fibbonaci(n-2);
+                        }
+                    return array[n-1]+array[n-2];
             }
-        
-        }
-        else{
-            return n;}
-            }
+        else
+            return n;
+    }
         
 
 
